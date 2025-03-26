@@ -1,4 +1,4 @@
-<h2 align="center">Catppuccin Frappe</h2>
+<h2 align="center">Catppuccin</h2>
 <h3 align="center">idleRPG by Vidski</h3>
 
 <p align="center">
