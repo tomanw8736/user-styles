@@ -7,6 +7,7 @@
 
 @preprocessor less
 @var select darkFlavor "Dark Flavor" ["frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select accentColor "Accent" ["mauve:Mauve"]
 ==/UserStyle==*/
 
 /* FONT  */
@@ -15,44 +16,53 @@
 @-moz-document domain("idle.vidski.dev") {
 
     // Assigning Variables
-    #catppuccin(@flavor) {
-        @mauve: @catppuccin[@@flavor][@mauve];
-    }
+        #catppuccin(@flavor) {
+            @mauve: @catppuccin[@@flavor][@mauve];
+        
 
-    /*
-    ##############################################
-    ###### ACTUAL NERD SHIT STARTING HERE  ######
-    ######       Made by: tomanw8736      ######
-    ######With help from: BrilliantWinter######
-    ##########################################
+        /*
+        ##############################################
+        ###### ACTUAL NERD SHIT STARTING HERE  ######
+        ######       Made by: tomanw8736      ######
+        ######With help from: BrilliantWinter######
+        ##########################################
+        */
 
-    */
-    .bg-background {
-        background-color: #232634;
-    }
+        :root {
+            @media (prefer-color-scheme: light) {
+                #catppuccin(@darkFlavor)
+            }
+            @media (prefer-color-scheme: dark) {
+                #catppuccin(@darkFlavor)
+            }
+        }
+        .bg-background {
+            background-color: #232634;
+        }
 
-    .bg-card {
-        background-color: #303446;
-    }
+        .bg-card {
+            background-color: #303446;
+        }
 
-    .bg-primary {
-        background-color: #ca9ee6;
-    }
-    .hover\:bg-primary\/90:hover {
-        background-color: #f4b8e4;
-    }
-    
-    .bg-sidebar {
-        background-color:#292c3c;
-    }
-    
-    [data-sidebar="footer"] svg circle:last-child {
-        stroke: @mauve !important;
-    }
-    
-    * {
-        border-color:#51576d;
-    }
+        .bg-primary {
+            background-color: #ca9ee6;
+        }
+        .hover\:bg-primary\/90:hover {
+            background-color: #f4b8e4;
+        }
+        
+        .bg-sidebar {
+            background-color:#292c3c;
+        }
+        
+        [data-sidebar="footer"] svg circle:last-child {
+            stroke: @mauve !important;
+        }
+        
+        * {
+            border-color:#51576d;
+        }
+        }
 }
 
 @catppuccin: {
