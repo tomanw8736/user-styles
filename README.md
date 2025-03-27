@@ -7,5 +7,5 @@
 
 <h2 align="center">Requirements</h2>
 <p>
-    These themes require [Stylus](https://github.com/openstyles/stylus), a userstyle manager for Chrome and Firefox.
+    These themes require Stylus, a userstyle manager for Chrome and Firefox.
 </p>
